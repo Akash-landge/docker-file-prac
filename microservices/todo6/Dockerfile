@@ -7,4 +7,5 @@ RUN rm -rf /var/www/html/*
 WORKDIR /var/www/html/
 COPY . .
 EXPOSE 80
-CMD ["apache2ctl" , "-DFOREGROUND"]
+#CMD ["apache2ct" , "-DFOREGROUND"]
+CMD ["nginx", "-g", "daemon off;"]
