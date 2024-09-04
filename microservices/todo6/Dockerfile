@@ -1,9 +1,10 @@
-FROM ubuntu:latest
-LABEL microservicehost="todo"
-RUN apt update
-RUN apt install nginx -y
-RUN rm -rf /var/www/html/index.html
+FROM ubuntu
+LABEL akash="07"
+RUN apt update &&\
+    apt install apache2 -y &&\
+    apt install vim -y
+RUN rm -rf /var/www/html/
 WORKDIR /var/www/html/
 COPY . .
 EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["apache2ctl" , "-DFOREGROUND"]
