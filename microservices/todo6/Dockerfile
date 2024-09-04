@@ -3,7 +3,7 @@ LABEL akash="07"
 RUN apt update &&\
     apt install apache2 -y &&\
     apt install vim -y
-RUN rm -rf /var/www/html/
+RUN rm -rf /var/www/html/*
 WORKDIR /var/www/html/
 COPY . .
 EXPOSE 80
