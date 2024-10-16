@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage('pull') {
             steps {
-                git 'https://github.com/Akash-landge/docker-file-prac'
                 echo 'pull work is done'
             } 
         } 
